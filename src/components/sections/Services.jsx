@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
 import serviceCategories from '../../data/services'
+import { asset } from '../../utils/asset'
 
 const serviceImages = {
-    'eye-exams': '/images/service-eye-exam.jpg',
-    'diagnostics': '/images/service-diagnostics.jpg',
-    'treatments': '/images/service-treatments.jpg',
-    'eyewear': '/images/service-eyewear.jpg',
+    'eye-exams': 'images/service-eye-exam.jpg',
+    'diagnostics': 'images/service-diagnostics.jpg',
+    'treatments': 'images/service-treatments.jpg',
+    'eyewear': 'images/service-eyewear.jpg',
 }
 
 export default function Services() {
@@ -31,7 +32,7 @@ export default function Services() {
                         >
                             <div className="h-52 sm:h-56 overflow-hidden">
                                 <img
-                                    src={serviceImages[cat.slug]}
+                                    src={asset(serviceImages[cat.slug])}
                                     alt={cat.title}
                                     className="w-full h-full object-cover transition-transform duration-600 group-hover:scale-105"
                                 />
