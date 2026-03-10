@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import useScrollAnimation from '../hooks/useScrollAnimation'
 import serviceCategories from '../data/services'
+import { asset } from '../utils/asset'
 
 export default function ServicesPage() {
     const ref = useScrollAnimation()
@@ -35,7 +36,7 @@ export default function ServicesPage() {
                                 <div className="flex flex-col sm:flex-row items-start gap-6 p-6 md:p-8 rounded-2xl bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-gold/30">
                                     <div className="shrink-0 w-full sm:w-48 h-40 sm:h-32 rounded-xl overflow-hidden">
                                         <img
-                                            src={`/images/service-${cat.slug === 'pediatric' ? 'eye-exam' : cat.slug}.jpg`}
+                                            src={asset(`/images/service-${cat.slug === 'pediatric' ? 'eye-exam' : cat.slug}.jpg`)}
                                             alt={cat.title}
                                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                         />

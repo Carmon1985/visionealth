@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import useScrollAnimation from '../hooks/useScrollAnimation'
 import doctors from '../data/doctors'
+import { asset } from '../utils/asset'
 
 export default function AboutPage() {
     const ref = useScrollAnimation()
@@ -82,7 +83,7 @@ export default function AboutPage() {
                                 <div className="w-full md:w-2/5 shrink-0">
                                     <Link to={`/about/${doc.slug}`} className="block rounded-2xl overflow-hidden shadow-lg group">
                                         <img
-                                            src={`/images/${doc.id}.jpg`}
+                                            src={asset(`/images/${doc.id}.jpg`)}
                                             alt={doc.name}
                                             className="w-full h-72 sm:h-96 object-cover object-top transition-transform duration-500 group-hover:scale-105"
                                             onError={(e) => {

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { asset } from '../../utils/asset'
 
 function CountUp({ end, suffix = '', duration = 2000 }) {
     const [count, setCount] = useState(0)
@@ -49,7 +50,7 @@ export default function Experience() {
             {/* Dark background */}
             <div className="absolute inset-0 bg-charcoal">
                 <img
-                    src="/images/experience-bg.jpg"
+                    src={asset('/images/experience-bg.jpg')}
                     alt=""
                     className="w-full h-full object-cover opacity-20"
                 />

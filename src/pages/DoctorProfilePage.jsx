@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import useScrollAnimation from '../hooks/useScrollAnimation'
 import doctors from '../data/doctors'
+import { asset } from '../utils/asset'
 
 export default function DoctorProfilePage() {
     const { slug } = useParams()
@@ -33,7 +34,7 @@ export default function DoctorProfilePage() {
                         <div className="w-full md:w-2/5 shrink-0 reveal">
                             <div className="rounded-2xl overflow-hidden shadow-lg">
                                 <img
-                                    src={`/images/${doc.id}.jpg`}
+                                    src={asset(`/images/${doc.id}.jpg`)}
                                     alt={doc.name}
                                     className="w-full h-72 sm:h-96 object-cover object-top"
                                     onError={(e) => {

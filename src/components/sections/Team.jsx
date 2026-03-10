@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import doctors from '../../data/doctors'
+import { asset } from '../../utils/asset'
 
 export default function Team() {
     return (
@@ -17,7 +18,7 @@ export default function Team() {
                         <Link key={doc.id} to={`/about/${doc.slug}`} className={`card reveal reveal-delay-${i + 1} group`}>
                             <div className="h-72 sm:h-80 overflow-hidden">
                                 <img
-                                    src={`/images/${doc.id}.jpg`}
+                                    src={asset(`/images/${doc.id}.jpg`)}
                                     alt={doc.name}
                                     className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                                     onError={(e) => {

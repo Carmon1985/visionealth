@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { asset } from '../../utils/asset'
 
 export default function Hero() {
     return (
@@ -6,7 +7,7 @@ export default function Hero() {
             {/* Background Image */}
             <div className="absolute inset-0">
                 <img
-                    src="/images/hero.jpg"
+                    src={asset('/images/hero.jpg')}
                     alt="Vision Health Institute"
                     className="w-full h-full object-cover"
                 />

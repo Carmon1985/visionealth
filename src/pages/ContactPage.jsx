@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import useScrollAnimation from '../hooks/useScrollAnimation'
+import { asset } from '../utils/asset'
 import clinicInfo from '../data/clinicInfo'
 
 export default function ContactPage() {
@@ -14,7 +15,7 @@ export default function ContactPage() {
         <div ref={ref}>
             {/* Header */}
             <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden">
-                <img src="/images/hero-contact.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
+                <img src={asset('/images/hero-contact.png')} alt="" className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-sand/85" />
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                     <p className="caption mb-4 reveal">Get in Touch</p>

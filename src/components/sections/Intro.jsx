@@ -1,3 +1,5 @@
+import { asset } from '../../utils/asset'
+
 export default function Intro() {
     return (
         <section className="section-padding bg-cream">
@@ -20,7 +22,7 @@ export default function Intro() {
                     <div className="w-full md:w-2/5 reveal reveal-delay-2">
                         <div className="rounded-2xl overflow-hidden shadow-lg">
                             <img
-                                src="/images/clinic-interior.jpg"
+                                src={asset('/images/clinic-interior.jpg')}
                                 alt="Modern eye care clinic interior"
                                 className="w-full h-64 md:h-80 object-cover"
                             />
